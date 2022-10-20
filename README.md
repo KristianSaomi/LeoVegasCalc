@@ -20,8 +20,9 @@ The reason I'm posting the project now is because I'm super interested and don't
 
 **QUIDE - How to start:**
 1) * Download  & Compile zip
-2) * Connect project to mySql database (In application.properties add own mySql database password)
-3) * Follow Sql statements descripiton in the file
-4) * Persistant entites that 
+2) * Download Sql file
+3) * Connect project to mySql database (In application.properties add own mySql database password)
+4) * Follow Sql statements descripiton in the file
+5) * Have fun!
 
 **Sneak peek at the project via video: https://www.loom.com/share/8c9937b6d53648a4a7cea7d8c5e949f5**
