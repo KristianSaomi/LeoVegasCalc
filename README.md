@@ -30,7 +30,7 @@ The reason I'm posting the project now is because I'm super interested and don't
 
 **Sneak peek at the project via video: https://www.loom.com/share/8c9937b6d53648a4a7cea7d8c5e949f5**
 
-Rest-endpoint to get started (Register>thank you> login> main menu with actions) 
+**Rest-endpoint to get started (Register>thank you> login> main menu with actions) **
 
 1. Create account: http://localhost:9090/registerUser
 2. Auto redirect after account registred: http://localhost:9090/register_success
