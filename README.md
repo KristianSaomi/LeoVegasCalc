@@ -18,10 +18,10 @@ But it does the job, by the submitet project im trying to show that im capable o
 
 The reason I'm posting the project now is because I'm super interested and don't want my chance to go away, the recruiter said it's a bit first come first served.
 
-** QUIDE - How to start:** 
-1) Download  & Compile zip
-2) Connect project to mySql database (In application.properties add own mySql database password)
-3) Follow Sql statements descripiton in the file
-4) Persistant entites that 
+**QUIDE - How to start:**
+1) * Download  & Compile zip
+2) * Connect project to mySql database (In application.properties add own mySql database password)
+3) * Follow Sql statements descripiton in the file
+4) * Persistant entites that 
 
 **Sneak peek at the project via video: https://www.loom.com/share/8c9937b6d53648a4a7cea7d8c5e949f5**
