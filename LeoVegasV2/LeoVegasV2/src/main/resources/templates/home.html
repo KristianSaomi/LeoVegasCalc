@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to LeoVegas</title>
+    <link th:href="@{/css/home.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="homeScreen" >
+        <img src="/images/leovegas.webp" class="leoVLogo" alt="Responsive image">
+    <div class="innerHome">
+        <a th:href="@{/personalData}">
+            <button class="submitBtn">Edit account</button> </a>
+        <a th:href="@{/account/new}">
+            <button class="submitBtn">Insert money</button>
+        </a>
+        <a th:href="@{/account/new/debit}">
+            <button class="submitBtn">Withdraw money</button>
+        </a>
+        <a th:href="@{/Accounts}">
+            <button class="submitBtn">See historic</button>
+        </a>
+        <a th:href="@{/checkTotal}">
+            <button class="submitBtn">Current Balance</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

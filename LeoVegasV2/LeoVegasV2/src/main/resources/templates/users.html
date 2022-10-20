@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>All users in LeoVegas</title>
+</head>
+<body>
+<div class="homeHeadDiv">
+  <div >
+    <h1 class="welcomeBack">Account details</h1>
+    <section>
+      <table>
+        <thead>
+        <tr>
+          <th>
+            <h5 class="homeChildText">user_id</h5>
+          </th>
+          <th>
+            <h5 class="homeChildText">Name</h5>
+          </th>
+          <th>
+            <h5 class="homeChildText">Email</h5>
+          </th>
+          <th>
+            <h5 class="homeChildText">Role</h5>
+          </th>
+          <th>
+            <h5 class="homeChildText">Manage</h5>
+          </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="user: ${getUsers}">
+          <th>
+            <label class="homeChildText">
+              <u th:text="${user.id}"></u>
+            </label>
+          </th>
+          <th>
+            <label class="homeChildText">
+              <u th:text="${user.firstName}"></u>
+            </label>
+          </th>
+          <th>
+            <label class="homeChildText">
+              <u th:text="${user.email}"></u>
+            </label>
+          </th>
+          <th>
+            <label class="homeChildText">
+              <u th:text="${user.getRoles()}"></u>
+            </label>
+          </th>
+          <th>
+            <a th:href="@{'/accountDetails/update/' + ${user.id}}">Edit</a>
+            &nbsp;
+            <a th:href="@{'/personalData/delete/' + ${user.id}}">Delete</a>
+          </th>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+</body>
+</html>

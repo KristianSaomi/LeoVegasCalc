@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>My Account - LeoVegas</title>
+  <link th:href="@{/css/myAccounts.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="homeScreen">
+  <img src="/images/leovegas.webp" class="leoVLogo" alt="Responsive image">
+    <h1>Debit / Credit history</h1>
+      <table class="tableData">
+        <thead>
+        <tr>
+          <th>
+            <h5 class="tableChild">Credit</h5>
+          </th>
+          <th>
+            <h5 class="tableChild">Debit</h5>
+          </th>
+          <th>
+            <h5 class="tableChild">Date/Status</h5>
+          </th>
+        </tr>
+        </thead>
+        <tbody class="tbodys">
+        <th:block th:each="account : ${listAccount}">
+          <tr>
+            <th>
+              <label class="homeChildText">
+                <u>[[${account.credit}]]</u>
+              </label>
+            </th>
+            <th>
+              <label class="homeChildText">
+                <u>[[${account.debit}]]</u>
+              </label>
+            </th>
+            <th>
+              <label class="homeChildText">
+                <u>[[${account.publishDate}]]</u>
+              </label>
+            </th>
+          </tr>
+        </th:block>
+        </tbody>
+      </table>
+      <div class="moreAccounts">
+        <h4 class="moreAccountTitle">Want to go back?</h4>
+        <button class="submitBtn" type="button" onclick="window.location.href='/home'">Go back</button>
+      </div>
+</div>
+</body>
+</html>

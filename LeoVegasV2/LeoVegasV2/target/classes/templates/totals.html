@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Total balance atm - LeoVegas</title>
+    <link th:href="@{/css/checkTotal.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="homeScreen">
+    <div class="homeScreenInner">
+        <img src="/images/leovegas.webp" class="leoVLogo" alt="Responsive image">
+        <h1 class="welcomeUser">Hi <span sec:authentication="principal.fullName"
+                                         class="customerName">Fullname></span></h1>
+        <h1 class="welcomeBack">Your total balance is:</h1>
+            <table>
+                <thead>
+                </thead>
+                <tbody class="tbodySek">
+                <tr th:each="sum: ${summery}">
+                    <th>
+                        <label class="homeChildText">
+                            <span class="totalBalance" >
+                            <p th:text="${sum}"></p>
+                                <p>&nbsp;kr</p>
+                                </span>
+                        </label>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
+</body>
+</html>

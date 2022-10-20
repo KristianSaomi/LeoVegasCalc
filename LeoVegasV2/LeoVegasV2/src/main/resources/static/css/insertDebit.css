@@ -1,0 +1,77 @@
+body {
+margin: 0px;
+padding: 0px;
+color: white;
+}
+
+.insertCredit {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: radial-gradient(100% 148px at 0,#f18825,#fd5c3c);
+margin: 0px;
+padding: 0px;
+color: white;
+}
+
+.leoVLogo {
+padding-bottom: 30px;
+width: 200px;
+height 200px;
+-webkit-animation: action 1s infinite  alternate;
+animation: action 1s infinite  alternate;
+}
+
+.form {
+display: flex;
+flex-direction: column;
+justify-conten: center;
+
+}
+.formInput {
+border-radius: 5px;
+border: none;
+padding: 8px;
+margin-top: 15px;
+width: 100%;
+margin-bottom: 15px;
+}
+
+.submitBtn {
+background-color: #1daa63;
+padding: 3px 50px 3px 50px;
+font-size: 20px;
+color: white;
+transition: 250ms ease-in-out;
+border: 1px solid #1daa63;
+border-radius: 5px;
+border: none;
+font-family: "roboto-slams";
+}
+
+.submitBtn:hover {
+background-color: #117643;
+}
+
+.selectedUser {
+display:none;
+}
+.creditBalancer {
+display:none;
+}
+.dateOfDebit {
+display:none
+}
+
+
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

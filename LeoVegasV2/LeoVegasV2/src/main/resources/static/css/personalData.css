@@ -1,0 +1,38 @@
+body {
+margin: 0px;
+padding: 0px;
+font-family:"roboto"
+}
+.homeScreen {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: radial-gradient(100% 148px at 0,#f18825,#fd5c3c);
+margin: 0px;
+padding: 0px;
+color: white;
+}
+.leoVLogo {
+padding-bottom: 30px;
+width: 200px;
+height 200px;
+-webkit-animation: action 1s infinite  alternate;
+animation: action 1s infinite  alternate;
+}
+
+table a {
+color: white;
+background: black;
+padding: 5px;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

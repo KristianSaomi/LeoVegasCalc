@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Sing up Leo Vegas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link th:href="@{/css/home.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="homeScreen">
+  <img src="/images/leovegas.webp" class="leoVLogo" alt="Responsive image">
+  <div>
+    <form th:action="@{/register_success}" th:object="${user}"
+          method="post">
+      <input type="email" th:field="*{email}" class="formInput"
+             required minlength="5" maxlength="70" placeholder="Enter your email" name="email"/>
+      <input type="password" th:field="*{password}" class="formInput"
+             required minlength="5" maxlength="70" placeholder="Enter a password" name="password"/>
+      <input type="text" th:field="*{firstName}" class="formInput"
+             required minlength="2" maxlength="20" placeholder="Enter your firstname" name="firstName"/>
+      <input type="text" th:field="*{lastName}" class="formInput"
+             required minlength="2" maxlength="20" placeholder="Enter your lastname" name="lastName"/>
+
+      <div class="innerForm">
+        <input type="checkbox" th:field="*{permission}" class="formInputCheckbox" required/>
+        <p>I accept all possible rules</p>
+      </div>
+
+      <div class="submitDiv">
+        <button type="submit" class="submitBtn">Sign me up!</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Login to LeoVegas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/login.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="homeScreenLogin">
+    <img src="/images/leovegas.webp" class="leoVLogo" alt="Responsive image">
+    <div>
+        <div th:if="${param.error}"> Invalid username and password.</div>
+        <div th:if="${param.logout}"> You have been logged out.</div>
+    </div>
+
+    <div th:switch="${#authentication}? ${#authorization.expression('isAuthenticated()')} : ${false}" >
+        <form th:case="${false}" th:action="@{/login}" method="post">
+            <div>
+                <div>
+                    <label> Email : </label>
+                    <div>
+                        <input class="formInput" type="text" name="email" placeholder="Enter your email"/>
+                    </div>
+                    <label>Password:</label>
+                    <div>
+                        <input class="formInput" type="password" name="password" placeholder="Enter your password"/>
+                    </div>
+                    <div class="submitDiv">
+                        <button class="submitBtn" type="submit">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div>
+            <div>
+            </div>
+        </div>
+        <a th:case="${true}" th:href="@{/logout}">
+            <button class="submitBtn" sec:authorize="isAuthenticated()">Logout</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Successfully added your LeoVegas account!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/home.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="homeScreen">
+        <h1 class="thanksMessage">Good job!</h1>
+        <p class="thanksP">We have added the user to the system.</p>
+        <p>Pss we welcomed you with 100 sek to play with</p>
+    <a th:href="@{/login}">
+        <button class="submitBtn">Lets win some more!</button>
+    </a>
+</div>
+</body>
+</html>

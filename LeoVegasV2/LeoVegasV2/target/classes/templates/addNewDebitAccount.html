@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add new Debit - LeoVegas</title>
+  <link th:href="@{/css/insertDebit.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="insertCredit">
+  <img src="/images/leovegas.webp" class="leoVLogo" alt="Responsive image">
+  <p class="welcomeParagraph" th:if="${Account.id == null}">Please enter the amount to withdraw!</p>
+  <p class="welcomeParagraph" th:unless="${Account.id == null}">Lets edit one of your skills!</p>
+
+  <form th:action="@{/account/save/withDrawal}" th:object="${Account}" method="post">
+    <input type="hidden" th:field="*{id}" th:value="${Account.id}">
+    <div>
+      <!--
+      <input type="number" th:field="*{balance}" class="formInput"
+             required minlength="1" maxlength="8" placeholder="Enter a balance" name="balance"/>
+      -->
+      <input class="formInput" type="number" th:field="*{debit}"
+             required max="25000"min="50" minlength="1" maxlength="8" placeholder="Enter debit balance" name="debit"/>
+
+      <input class="creditBalancer" type="number" th:field="*{credit}"
+             required  minlength="1" maxlength="8" placeholder="Enter credit balance" name="credit"/>
+    </div>
+    <input class="dateOfDebit" th:type="*{publishDate}" th:name="publishDate" required th:value="${#dates.format(#dates.createNow() , 'yyyy/MMM/dd/ - HH:mm:ss')}">
+
+    <div class ="selectedUser">
+      <select th:field="*{user}" required>
+        <th:block th:each="user : ${listUsers}">
+          <option th:text="${user.firstName}" th:value="${user.id}"></option>
+          <option th:text="${user.firstName}" th:value="${user.id}"></option>
+        </th:block>
+      </select>
+    </div>
+    <div class ="buttonHolder">
+      <button class="submitBtn" type="submit">Withdraw money from account!</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

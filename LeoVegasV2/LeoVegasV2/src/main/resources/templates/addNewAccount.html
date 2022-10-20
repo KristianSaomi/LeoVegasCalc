@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add new credit - LeoVegas</title>
+  <link th:href="@{/css/insertCredit.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="insertCredit">
+  <img src="/images/leovegas.webp" class="leoVLogo" alt="Responsive image">
+  <h1 class="welcomeUser">Hi <span sec:authentication="principal.fullName"
+                                   class="customerName">Fullname></span></h1>
+  <p class="welcomeParagraph" th:if="${Account.id == null}">Please enter a debit balance to your account!</p>
+  <p class="welcomeParagraph" th:unless="${Account.id == null}">Lets edit one of your skills!</p>
+
+  <form th:action="@{/account/save}" th:object="${Account}" method="post">
+    <input type="hidden" th:field="*{id}" th:value="${Account.id}">
+    <div>
+      <!--
+      <input type="number" th:field="*{balance}" class="formInput"
+             required minlength="1" maxlength="8" placeholder="Enter a balance" name="balance"/>
+      -->
+
+      <input class="debitBalancer" type="number" th:field="*{debit}"
+             required minlength="1" maxlength="8" placeholder="Enter debit balance" name="debit"/>
+
+      <input class="formInput" type="number" th:field="*{credit}"
+             required max="50000"min="100"minlength="1" maxlength="8" placeholder="Enter credit balance" name="credit"/>
+    </div>
+    <input class="dateOfDebit" th:type="*{publishDate}" th:name="publishDate" required th:value="${#dates.format(#dates.createNow() , 'yyyy/MMM/dd/ - HH:mm:ss')}">
+
+    <div class ="selectedUser">
+      <select th:field="*{user}" required>
+        <th:block th:each="user : ${listUsers}">
+          <option th:text="${user.firstName}" th:value="${user.id}"></option>
+          <option th:text="${user.firstName}" th:value="${user.id}"></option>
+        </th:block>
+      </select>
+    </div>
+    <div class ="buttonHolder">
+      <button class="submitBtn" type="submit">Submit balance now</button>
+      <button class="submitBtn" type="button" onclick="window.location.href='/home'">Go back</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
