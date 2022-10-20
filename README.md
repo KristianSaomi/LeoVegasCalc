@@ -1,3 +1,6 @@
+![Skärmbild 2022-10-20 025603](https://user-images.githubusercontent.com/38978953/196836821-24c01d28-0107-458f-988e-434ff31f0443.png)
+
+
 # LeoVegasCalc
 This project is made for LeoVegas group.
 
