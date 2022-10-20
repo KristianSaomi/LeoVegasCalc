@@ -29,3 +29,19 @@ The reason I'm posting the project now is because I'm super interested and don't
 5) * Have fun!
 
 **Sneak peek at the project via video: https://www.loom.com/share/8c9937b6d53648a4a7cea7d8c5e949f5**
+
+Rest-endpoint to get started (Register>thank you> login> main menu with actions) 
+
+1. Create account: http://localhost:9090/registerUser
+2. Auto redirect after account registred: http://localhost:9090/register_success
+3. Login: http://localhost:9090/login
+4. Homepage with actions: http://localhost:9090/home
+
+Actions:
+Edit account: http://localhost:9090/personalData
+Insert credit: http://localhost:9090/account/new
+Withdraw debit: http://localhost:9090/account/new/debit
+See history: http://localhost:9090/Accounts
+Check balance: http://localhost:9090/checkTotal
+![image](https://user-images.githubusercontent.com/38978953/196838324-653c7668-4be3-48a8-805d-2e34da7ee6b7.png)
+
