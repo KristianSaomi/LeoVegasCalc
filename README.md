@@ -11,6 +11,7 @@ But it does the job, by the submitet project im trying to show that im capable o
 
 **What I could do better/My own toughts on myself and the work:** 
 * Encapsulate classes better, use private methods and fields to keep it more abstract and reduce coupling.
+-Working with thymleaf makes it a bit difficult doe it complains on private getters and setters on the objets.
 
 * The database structure could have been much better, but for the sake of the test, I chose to continue in the middle of the project. One difficulty was that I wanted to present the REST api project in a better view than what you might be used to through postman or similar, therefore I used Thymleaf as backend/frontend tool. The problem is that I don't have "very" advanced knowledge in thymleaf and then it became a bit problematic.
 - In regards to database structure im particular talking about: The Account section can be allot more smother instead of having the "balance" presented as a variable, doesnt make sence in a real application.
