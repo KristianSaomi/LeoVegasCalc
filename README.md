@@ -6,7 +6,7 @@ This project is made for LeoVegas group.
 
 **Hi Leo Vegas!** 
 
-Im now done with the task, however if im 100% please and know it couldnt be better... not really. 
+Im now done with the task, however if im 100% please and know it couldnt be better... yeah it could. 
 But it does the job, by the submitet project im trying to show that im capable of working with Spring in general and love to develop my skills, or rather want to.
 
 **What I could do better/My own toughts on myself and the work:** 
