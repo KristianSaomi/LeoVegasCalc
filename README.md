@@ -14,13 +14,14 @@ But it does the job, by the submitet project im trying to show that im capable o
 -Working with thymleaf makes it a bit difficult doe it complains on private getters and setters on the objets.
 
 * The database structure could have been much better, but for the sake of the test, I chose to continue in the middle of the project. One difficulty was that I wanted to present the REST api project in a better view than what you might be used to through postman or similar, therefore I used Thymleaf as backend/frontend tool. The problem is that I don't have "very" advanced knowledge in thymleaf and then it became a bit problematic.
+One example is passing in error messages as you pass the limit of your credit amount.
 - In regards to database structure im particular talking about: The Account section can be allot more smother instead of having the "balance" presented as a variable, doesnt make sence in a real application.
 
-* I can also honestly say that I did not create "unique" endpoints, I was a little stressed trying to tackle that point in the project. But a spontaneous idea I got into my head was honestly to create a method that returns a string using Math.random.
+* I can also honestly say that I did not create "unique" endpoints, I was a little stressed trying to tackle that point in the project. But a spontaneous idea I got into my head was honestly to create a method that use Math.random, however i suspect there have to be something in regards to the @Transaction annotation or something similiar.
 
 
 
-The reason I'm posting the project now is because I'm super interested and don't want my chance to go away, the recruiter said it's a bit first come first served.
+The reason I'm posting the project now is because I'm super interested and don't want my chance to go away, the recruiter said it's a bit "first come first served".
 
 **QUIDE - How to start:**
 1) * Download  & Compile zip
